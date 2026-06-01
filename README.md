@@ -66,17 +66,9 @@ java -cp "target/biblioteca-grpc-1.0-SNAPSHOT-cliente.jar:target/libs/*" \
 ## Saída esperada
 
 ### Servidor
-```
-══════════════════════════════════════════════
-  Servidor Biblioteca gRPC iniciado na porta 50051
-══════════════════════════════════════════════
-[INTERCEPTOR] 2024-01-15 10:00:01 | Token recebido: biblioteca-token-2024
-[INTERCEPTOR] 2024-01-15 10:00:01 | → Chamada recebida: biblioteca.BibliotecaService/CadastrarLivro
-[SERVIDOR] CadastrarLivro | titulo='Clean Code' autor='Robert C. Martin' isbn='ISBN-001'
-[SERVIDOR] Livro cadastrado com ID=LIV-1
-[INTERCEPTOR] 2024-01-15 10:00:01 | ← Chamada encerrada: ... | status=OK | duração=12 ms
-...
-```
+
+<img width="1090" height="724" alt="image" src="https://github.com/user-attachments/assets/b8570cae-439f-4c2a-bb7f-66a453d3222e" />
+
 
 ### Cliente
 
