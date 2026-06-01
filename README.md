@@ -79,49 +79,8 @@ java -cp "target/biblioteca-grpc-1.0-SNAPSHOT-cliente.jar:target/libs/*" \
 ```
 
 ### Cliente
-```
-╔══════════════════════════════════════════════════════╗
-║  TESTE 1 — Cadastrar 3 livros (Unary RPC)
-╚══════════════════════════════════════════════════════╝
-  ✔ [OK] 'Clean Code' cadastrado — ID: LIV-1
-  ✔ [OK] 'The Pragmatic Programmer' cadastrado — ID: LIV-2
-  ✔ [OK] 'Designing Data-Intensive Applications' cadastrado — ID: LIV-3
 
-╔══════════════════════════════════════════════════════╗
-║  TESTE 2 — Listar livros de autor cadastrado (Server Streaming)
-╚══════════════════════════════════════════════════════╝
-  Buscando livros do autor: 'Robert C. Martin'
-  → [LIV-1] 'Clean Code' (2008) — ISBN: ISBN-001
-
-╔══════════════════════════════════════════════════════╗
-║  TESTE 3 — Listar livros de autor inexistente (deve retornar NOT_FOUND)
-╚══════════════════════════════════════════════════════╝
-  Buscando livros do autor: 'Autor Inexistente'
-  ✘ Erro: NOT_FOUND — Nenhum livro encontrado para o autor: Autor Inexistente
-
-╔══════════════════════════════════════════════════════╗
-║  TESTE 4 — Registrar 5 empréstimos (Client Streaming)
-╚══════════════════════════════════════════════════════╝
-  → Enviando empréstimo: usuário='Alice' livro='LIV-1'
-  ...
-  ✔ Resumo recebido: 5 empréstimo(s) em 503 ms — 5 empréstimo(s) registrado(s) com sucesso.
-
-╔══════════════════════════════════════════════════════╗
-║  TESTE 5 — Chat com bibliotecário (Bidirectional Streaming)
-╚══════════════════════════════════════════════════════╝
-  💬 Usuário 'Alice' pergunta sobre: 'java'
-  📚 Sugestão: 'Effective Java' — Joshua Bloch | Sugestão baseada na palavra-chave: "java"
-  ...
-
-╔══════════════════════════════════════════════════════╗
-║  TESTE 6 — Cadastrar livro com ISBN duplicado (deve retornar ALREADY_EXISTS)
-╚══════════════════════════════════════════════════════╝
-  ✘ Erro ao cadastrar 'Livro Duplicado': ALREADY_EXISTS — Já existe um livro com ISBN: ISBN-001
-
-✅ Todos os testes concluídos.
-```
-
----
+<img width="947" height="815" alt="image" src="https://github.com/user-attachments/assets/885d0020-06ef-4b0b-ae11-895d8cb4764b" />
 
 ## Estrutura do projeto
 
