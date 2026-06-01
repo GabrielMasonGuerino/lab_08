@@ -143,7 +143,7 @@ biblioteca-grpc/
 
 ---
 
-## Aluno
+## Alunos
 
 | Nome | RA |
 |------|----|
