@@ -148,5 +148,5 @@ biblioteca-grpc/
 | Nome | RA |
 |------|----|
 | *Gabriel Mason Guerino* | *(10409928)* |
-| *Mauricio Vicentini* | *10426074* |
-| *Victor Hong * | *10425852* |
+| *Mauricio Vicentini* | *(10426074)* |
+| *Victor Hong* | *(10425852)* |
