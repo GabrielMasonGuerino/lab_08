@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.mackenzie.biblioteca.grpc";
+option java_outer_classname = "BibliotecaProto";
+
+package biblioteca;
+
+// ─────────────────────────────────────────────
+// Mensagens
+// ─────────────────────────────────────────────
+
+message Livro {
+  string id     = 1;
+  string titulo = 2;
+  string autor  = 3;
+  int32  ano    = 4;
+  string isbn   = 5;
+}
+
+message CadastrarLivroRequest {
+  string titulo = 1;
+  string autor  = 2;
+  int32  ano    = 3;
+  string isbn   = 4;
+}
+
+message CadastrarLivroResponse {
+  string id      = 1;
+  bool   sucesso = 2;
+  string mensagem = 3;
+}
+
+message ListarLivrosPorAutorRequest {
+  string autor = 1;
+}
+
+message Emprestimo {
+  string usuario  = 1;
+  string livro_id = 2;
+}
+
+message ResumoEmprestimos {
+  int32  total_registrado       = 1;
+  int64  tempo_processamento_ms = 2;
+  string mensagem               = 3;
+}
+
+message MensagemChat {
+  string usuario    = 1;
+  string palavra_chave = 2;
+}
+
+message SugestaoLivro {
+  string titulo    = 1;
+  string autor     = 2;
+  string motivo    = 3;
+}
+
+// ─────────────────────────────────────────────
+// Serviço
+// ─────────────────────────────────────────────
+
+service BibliotecaService {
+
+  // 1) Unary RPC
+  rpc CadastrarLivro (CadastrarLivroRequest) returns (CadastrarLivroResponse);
+
+  // 2) Server Streaming RPC
+  rpc ListarLivrosPorAutor (ListarLivrosPorAutorRequest) returns (stream Livro);
+
+  // 3) Client Streaming RPC
+  rpc RegistrarEmprestimos (stream Emprestimo) returns (ResumoEmprestimos);
+
+  // 4) Bidirectional Streaming RPC
+  rpc ChatBibliotecario (stream MensagemChat) returns (stream SugestaoLivro);
+}
