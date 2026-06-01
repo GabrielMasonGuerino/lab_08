@@ -126,7 +126,7 @@ java -cp "target/biblioteca-grpc-1.0-SNAPSHOT-cliente.jar:target/libs/*" \
 ## Estrutura do projeto
 
 ```
-biblioteca-grpc/
+lab_08/
 ├── pom.xml
 └── src/
     └── main/
